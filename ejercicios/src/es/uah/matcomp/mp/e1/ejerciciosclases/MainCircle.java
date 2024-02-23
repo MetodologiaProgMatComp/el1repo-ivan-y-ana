@@ -1,3 +1,4 @@
+package es.uah.matcomp.mp.e1.ejerciciosclases;
 import es.uah.matcomp.mp.e1.ejerciciosclases.EJ1.Circle;
 
 public class MainCircle {
@@ -16,4 +17,4 @@ public class MainCircle {
         System.out.printf("circumference is: %.2f%n", c1.getCircumference());
     }
 }
-}
+
