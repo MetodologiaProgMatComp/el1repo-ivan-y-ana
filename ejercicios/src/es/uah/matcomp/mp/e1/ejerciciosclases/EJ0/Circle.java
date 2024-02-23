@@ -13,13 +13,13 @@ public class Circle {  // Save as "Circle.java"
         color = "red";
     }
     /** Constructs a Circle instance with the given radius and default color */
-    public Circle(double r) { // 2nd constructor
-        radius = r;
+    public Circle(double radius) { // 2nd constructor
+        this.radius = radius;
         color = "blue";
     }
     // 3rd constructor to construct a new instance of Circle with the given radius and color
-    public Circle (double r, String c) {
-        radius = r;
+    public Circle (double radius, String c) {
+        this.radius = radius;
         color = c;
     }
     /** Returns the radius */
@@ -36,13 +36,18 @@ public class Circle {  // Save as "Circle.java"
     }
 
     // Setter for instance variable radius
-    public void setRadius(double newRadius) {
-        radius = newRadius;
+    public void setRadius(double radius) {
+        this.radius = radius; // "this.radius" refers to the instance variable
+        // "radius" refers to the method's argument
     }
     // Setter for instance variable color
     public void setColor(String newColor) {
         color = newColor;
-
     }
+    /** Return a self-descriptive string of this instance in the form of Circle[radius=?,color=?] */
+    public String toString() {
+        return "Circle[radius=" + radius + " color=" + color + "]";
+    }
+
 }
 
