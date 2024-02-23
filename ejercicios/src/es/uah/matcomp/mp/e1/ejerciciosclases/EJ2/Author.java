@@ -17,6 +17,6 @@ public class Author {
         this.email=email;
     }
     public String toString(){
-        return this.toString();
+        return "Author[name="+name+",email="+email+"]";
     }
 }

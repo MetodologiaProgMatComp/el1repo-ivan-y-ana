@@ -28,6 +28,23 @@ public class Book {
     public Author getAuthor(){
         return this.author;
     }
-    public double
+    public double getPrice(){
+        return this.price;
+    }
+    public void setPrice(double price){
+        this.price=price;
+    }
+    public int getQty(){
+        return this.qty;
+    }
+    public void setQty(int qty){
+        this.qty=qty;
+    }
+    public String getAuthorName(){
+        return this.author.getName();
+    }
+    public String toString(){
+        return "Book[isbn="+isbn+",name="+name+",Author[name="+author.getName()+",email="+author.getEmail()+"],price="+price+",qty="+qty+"]";
+    }
 
 }
