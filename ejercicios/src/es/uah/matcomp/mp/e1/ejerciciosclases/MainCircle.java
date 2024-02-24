@@ -1,5 +1,5 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases;
-import es.uah.matcomp.mp.e1.ejerciciosclases.EJ1.Circle;
+import es.uah.matcomp.mp.e1.ejerciciosclases.HOJA1.Circle;
 
 public class MainCircle {
     public static void main(String[] args) {

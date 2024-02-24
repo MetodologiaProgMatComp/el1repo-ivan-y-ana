@@ -1,5 +1,5 @@
-import es.uah.matcomp.mp.e1.ejerciciosclases.EJ2.Author;
-import es.uah.matcomp.mp.e1.ejerciciosclases.EJ2.Book;
+import es.uah.matcomp.mp.e1.ejerciciosclases.HOJA2.Author;
+import es.uah.matcomp.mp.e1.ejerciciosclases.HOJA2.Book;
 
 public class MainAuthorBook {
         public static void main(String[] args) {
@@ -25,5 +25,5 @@ public class MainAuthorBook {
             System.out.println("author's name: " + b1.getAuthor().getName());
             System.out.println("author's email: " + b1.getAuthor().getEmail());
         }
-    }
+
 }

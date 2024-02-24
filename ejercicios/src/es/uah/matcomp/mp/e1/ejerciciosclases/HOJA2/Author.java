@@ -1,4 +1,4 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.EJ2;
+package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA2;
 
 public class Author {
     private String name;
