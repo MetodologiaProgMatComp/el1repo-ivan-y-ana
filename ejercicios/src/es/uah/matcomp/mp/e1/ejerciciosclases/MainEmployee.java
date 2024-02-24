@@ -1,4 +1,6 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA1;
+package es.uah.matcomp.mp.e1.ejerciciosclases;
+
+import es.uah.matcomp.mp.e1.ejerciciosclases.HOJA1.Employee;
 
 public class MainEmployee {
     public static void main(String[] args) {
