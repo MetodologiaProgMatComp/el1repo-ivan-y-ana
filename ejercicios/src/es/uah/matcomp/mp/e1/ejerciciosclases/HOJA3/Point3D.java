@@ -26,8 +26,6 @@ public class Point3D extends Point2D {
     }
     @Override
     public String toString(){
-        return "("+super.toString()+","+z+")";
+        return "("+getX()+","+getY()+","+getZ()+")";
     }
-
-
 }
