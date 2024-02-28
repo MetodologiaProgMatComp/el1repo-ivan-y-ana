@@ -31,7 +31,11 @@ public class Point2D {
         this.y=y;
     }
     public float[] getXY(){
-        return new float[]{x,y};
+        //return new float[]{x,y};
+        float[] result = new float[2]; // construct an array of 2 elements
+        result[0] = x;
+        result[1] = y;
+        return result; // return the array
     }
     public String toString(){
         return "("+x+","+y+")";
