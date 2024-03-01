@@ -1,14 +1,14 @@
-package HOJA4;
+package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4;
 
-public class Circle extends Shape{
+public class Circle1 extends Shape {
     protected double radius = 1.0;
-    public Circle(){
+    public Circle1(){
         super();
     }
-    public Circle(double radius){
+    public Circle1(double radius){
         this.radius = radius;
     }
-    public Circle(double radius, String color, boolean filled){
+    public Circle1(double radius, String color, boolean filled){
         super(color, filled);
         this.radius = radius;
     }

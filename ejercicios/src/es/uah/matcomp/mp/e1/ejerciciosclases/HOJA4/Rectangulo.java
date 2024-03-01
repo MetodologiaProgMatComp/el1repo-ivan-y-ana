@@ -1,6 +1,6 @@
-package HOJA4;
+package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4;
 
-public class Rectangulo implements GeometricObject{
+public class Rectangulo implements GeometricObject1 {
     private double width;
     private double length;
     public Rectangulo(double width,double length){

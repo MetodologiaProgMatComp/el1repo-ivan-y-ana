@@ -1,8 +1,8 @@
-package HOJA4;
+package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4;
 
-public class Circulo implements GeometricObject{
+public class Circle2 implements GeometricObject1 {
     private double radius;
-    public Circulo(double radius){
+    public Circle2(double radius){
         this.radius = radius;
     }
     public String toString(){

@@ -1,14 +1,14 @@
-package HOJA4;
+package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4;
 
 public class MainShape {
-    Shape s1 = new Circle(5.5, "red", false); // Upcast Circle to Shape
+    Shape s1 = new Circle1(5.5, "red", false); // Upcast Circle to Shape
     System.out.println(s1); // which version?
     System.out.println(s1.getArea()); // which version?
     System.out.println(s1.getPerimeter()); // which version?
     System.out.println(s1.getColor());
     System.out.println(s1.isFilled());
     System.out.println(s1.getRadius());
-    Circle c1 = (Circle)s1; // Downcast back to Circle
+    Circle1 c1 = (Circle1)s1; // Downcast back to Circle
     System.out.println(c1);
     System.out.println(c1.getPerimeter());
     System.out.println(c1.getColor());

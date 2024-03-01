@@ -1,6 +1,6 @@
-package HOJA4;
+package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4;
 
-public class GeometricObject <<interface>>{
+public interface GeometricObject1 {
     public double getArea(){
         return area;
     }

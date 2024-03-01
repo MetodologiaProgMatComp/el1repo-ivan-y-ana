@@ -1,4 +1,4 @@
-package HOJA4;
+package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4;
 
 public class Movable <<interface>>{
     public void moveUp(){

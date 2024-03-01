@@ -1,8 +1,6 @@
-package HOJA4;
+package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4;
 
-import java.util.concurrent.SynchronousQueue;
-
-public class Square extends Rectangle{
+public class Square extends Rectangle {
     protected double side; //no pone que haga esto
     public Square(){
         super();

@@ -1,6 +1,6 @@
-package HOJA4;
+package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4;
 
-public class Rectangle extends Shape{
+public class Rectangle extends Shape {
     protected double width = 1.0;
     protected double length = 1.0;
     public Rectangle(){
