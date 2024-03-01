@@ -17,4 +17,3 @@ public class MainCircle {
         System.out.printf("circumference is: %.2f%n", c1.getCircumference());
     }
 }
-
