@@ -10,4 +10,12 @@ public class Rectangulo implements GeometricObject1 {
     public String toString(){
         return "Rectangle[width=" + width + ",length=" + length + "]";
     }
+    @Override
+    public double getArea(){
+        return width*length;
+    }
+    @Override
+    public double getPerimeter(){
+        return 2+(width+length);
+    }
 }

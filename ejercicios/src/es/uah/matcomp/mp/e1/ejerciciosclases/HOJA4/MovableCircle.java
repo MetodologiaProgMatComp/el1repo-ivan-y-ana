@@ -1,14 +1,11 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4;
 
 public MovableCircle implements Movable{
+    MovablePoint[] composes= new MovablePoint[]();
     private int radius;
     private MovablePoint center;
     public MovableCircle(int x,int y,int,int xSpeed,int ySpeed,int radius){
-        super(x,y,xSpeed,ySpeed);
-        this.x = x;
-        this.y = y;
-        this.xSpeed = xSpeed;
-        this.ySpeed = ySpeed;
+
         this.radius = radius;
     }
     @Override

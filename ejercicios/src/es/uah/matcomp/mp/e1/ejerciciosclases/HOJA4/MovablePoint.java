@@ -12,17 +12,21 @@ public class MovablePoint implements Movable{
         this.ySpeed = ySpeed;
     }
     public String toString(){
-        return "(" + x + ", " + y + ") speed=(" + x + ", " + y + ")";
+        return "(" + x + ", " + y + "), speed=(" + xSpeed + ", " + ySpeed + ")";
     }
+    @Override
     public void moveUp(){
         this.y -= ySpeed;
     }
+    @Override
     public void moveDown(){
         this.y += ySpeed;
     }
+    @Override
     public void moveLeft(){
         this.x -= xSpeed;
     }
+    @Override
     public void moveRight(){
         this.x += xSpeed;
     }
