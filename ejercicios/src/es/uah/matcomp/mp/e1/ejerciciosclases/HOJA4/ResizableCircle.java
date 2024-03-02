@@ -1,6 +1,7 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4;
 
 public class ResizableCircle extends Circle3 implements Resizable {
+
     //Constructor
     public ResizableCircle(double radius){
         super(radius);
@@ -11,7 +12,7 @@ public class ResizableCircle extends Circle3 implements Resizable {
         return "ResizableCircle[" + super.toString();
     }
     @Override
-    public double resize(int percent){
+    public void resize(int percent){
         radius *= percent/100.0;
     }
 }

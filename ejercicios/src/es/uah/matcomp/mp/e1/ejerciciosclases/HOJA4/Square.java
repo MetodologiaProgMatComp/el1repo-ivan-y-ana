@@ -1,7 +1,9 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4;
 
-public class Square extends Rectangle {
+public class Square extends Rectangle1 {
     protected double side; //no pone que haga esto
+
+    //Constructores
     public Square(){
         super();
     }
@@ -13,6 +15,7 @@ public class Square extends Rectangle {
         super(side,side,color,filled);
         this.side=side;
     }
+
     public double getSide(){
         return side;
     }

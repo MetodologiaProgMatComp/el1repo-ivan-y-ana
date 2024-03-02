@@ -2,6 +2,8 @@ package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4;
 
 public class BigDog extends Dog {
     //El override solo se pone en los métodos que tienen (super) y en los metodos heredados de la superclase
+
+    // Constructor
     public BigDog(String name){
         super(name);
     }

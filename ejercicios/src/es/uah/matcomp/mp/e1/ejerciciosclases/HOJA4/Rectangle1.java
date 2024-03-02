@@ -1,20 +1,23 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4;
 
-public class Rectangle extends Shape {
+public class Rectangle1 extends Shape {
     protected double width = 1.0;
     protected double length = 1.0;
-    public Rectangle(){
+
+    //Constructores
+    public Rectangle1(){
         super();
     }
-    public Rectangle(double width,double length){
+    public Rectangle1(double width, double length){
         this.width = width;
         this.length = length;
     }
-    public Rectangle(double width,double length,String color,boolean filled){
+    public Rectangle1(double width, double length, String color, boolean filled){
         super(color, filled);
         this.width = width;
         this.length = length;
     }
+
     public double getWidth(){
         return width;
     }
@@ -27,9 +30,11 @@ public class Rectangle extends Shape {
     public void setLength(double length){
         this.length = length;
     }
+    @Override
     public double getArea(){
         return width * length;
     }
+    @Override
     public double getPerimeter(){
         return 2 * width + 2 * length;
     }
