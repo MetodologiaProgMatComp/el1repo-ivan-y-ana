@@ -1,4 +1,8 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4;
+package es.uah.matcomp.mp.e1.ejerciciosclases;
+
+import es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4.Movable;
+import es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4.MovableCircle;
+import es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4.MovablePoint;
 
 public class MainMovable {
     public static void main(String [] args){

@@ -7,13 +7,30 @@ abstract greeting():void
 class Cat extends Animal{
 greeting():void
 }
+note left of Cat::void
+  "Print Meow!"
+end note
+
 class Dog extends Animal{
 greeting():void
 greeting(another: Dog):void
 }
+note right of Dog::void
+  "Print Woof!"
+end note
+note right of Dog::"greeting(another: Dog):void"
+  "Print Woooooooooof!"
+end note
+
 class BigDog extends Dog{
 greeting():void
 greeting(another: Dog):void
 }
+note right of BigDog::void
+  "Print Woow!"
+end note
+note right of BigDog::"greeting(another: Dog):void"
+  "Print Woooooowwwww!"
+end note
 
 @enduml

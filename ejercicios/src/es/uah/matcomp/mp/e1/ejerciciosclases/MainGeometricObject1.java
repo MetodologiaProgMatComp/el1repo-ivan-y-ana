@@ -1,4 +1,8 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4;
+package es.uah.matcomp.mp.e1.ejerciciosclases;
+
+import es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4.Circle2;
+import es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4.GeometricObject1;
+import es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4.Rectangle2;
 
 public class MainGeometricObject1 {
     public static void main(String[] args){

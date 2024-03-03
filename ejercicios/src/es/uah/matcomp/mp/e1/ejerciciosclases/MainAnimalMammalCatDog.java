@@ -22,3 +22,4 @@ public class MainAnimalMammalCatDog {
         d2.greets(d2);
     }
 }
+
