@@ -1,18 +1,16 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA2;
-
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MyPointTest {
 
-    @Test
+    @org.junit.jupiter.api.Test
     void getX() {
         MyPoint p1 = new MyPoint(3,4);
         assertEquals(3,p1.getX());
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void setX() {
         int nuevoX = 5;
         MyPoint p2 = new MyPoint(1,3);
@@ -20,13 +18,13 @@ class MyPointTest {
         assertEquals(5,p2.getX());
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void getY() {
         MyPoint p1 = new MyPoint(3,4);
         assertEquals(4,p1.getY());
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void setY() {
         int nuevoY = 2;
         MyPoint p2 = new MyPoint(1,3);
@@ -34,7 +32,7 @@ class MyPointTest {
         assertEquals(2,p2.getY());
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void getXY() {
         MyPoint p3 = new MyPoint(3,2);
         int [] esperado = new int[2];
@@ -44,7 +42,7 @@ class MyPointTest {
         assertArrayEquals(esperado,actual);
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void setXY() {
         int nuevoX = 4;
         int nuevoY = 7;
@@ -55,7 +53,7 @@ class MyPointTest {
         assertArrayEquals(esperado,actual);
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void testToString() {
         MyPoint p5 = new MyPoint(2,3);
         String esperado = "(2,3)";
@@ -63,7 +61,7 @@ class MyPointTest {
         assertEquals(esperado,actual);
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void distance() { //Un punto y otras coordenadas
         int x1 = 3;
         int y1 = 4;
@@ -71,7 +69,7 @@ class MyPointTest {
         assertEquals(5,p1.distance(6,8));
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void testDistance() { //Un punto a otro
         int x1 = 3;
         int y1 = 4;
@@ -82,7 +80,7 @@ class MyPointTest {
         assertEquals(5,p1.distance(p2));
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void testDistance1() { //Un punto a 0,0
         MyPoint p1 = new MyPoint(3,4);
         assertEquals(5,p1.distance());
