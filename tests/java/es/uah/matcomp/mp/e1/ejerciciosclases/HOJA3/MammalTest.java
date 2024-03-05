@@ -8,5 +8,9 @@ class MammalTest {
 
     @Test
     void testToString() {
+        String name = "Elephant";
+        Mammal mammal = new Mammal(name);
+        String expectedToString = "Mammal[Animal[name=" + name + "]]";
+        assertEquals(expectedToString, mammal.toString());
     }
 }

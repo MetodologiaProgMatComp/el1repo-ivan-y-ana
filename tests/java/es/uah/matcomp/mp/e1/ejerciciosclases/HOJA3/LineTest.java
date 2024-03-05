@@ -35,8 +35,9 @@ class LineTest {
         Point2 begin = new Point2(1, 2);
         Point2 end = new Point2(3, 4);
         Line line = new Line(begin, end);
-        line.setBegin(new Point2(5, 6));
-        assertEquals(line.setBegin(), line.getBegin());
+        Point2 newBegin = new Point2(5, 6);
+        line.setBegin(newBegin);
+        assertEquals(newBegin, line.getBegin());
     }
 
     @Test
@@ -44,8 +45,9 @@ class LineTest {
         Point2 begin = new Point2(1, 2);
         Point2 end = new Point2(3, 4);
         Line line = new Line(begin, end);
-        line.setEnd(new Point2(7, 8));
-        assertEquals(new Point2(7, 8), line.getEnd());
+        Point2 newEnd = new Point2(8, 10);
+        line.setEnd(newEnd);
+        assertEquals(newEnd, line.getEnd());
     }
 
     @Test
