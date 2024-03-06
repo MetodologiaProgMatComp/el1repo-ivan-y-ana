@@ -9,7 +9,7 @@ public class ResizableCircle extends Circle3 implements Resizable {
     // Implement methods defined in the interface Resizable
     @Override
     public String toString(){
-        return "ResizableCircle[" + super.toString();
+        return "ResizableCircle[" + super.toString() + "]";
     }
     @Override
     public void resize(int percent){

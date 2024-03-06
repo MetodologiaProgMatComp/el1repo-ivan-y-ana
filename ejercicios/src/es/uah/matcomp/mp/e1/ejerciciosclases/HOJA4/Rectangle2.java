@@ -18,6 +18,6 @@ public class Rectangle2 implements GeometricObject1 {
     }
     @Override
     public double getPerimeter(){
-        return 2+(width+length);
+        return 2*(width+length);
     }
 }
