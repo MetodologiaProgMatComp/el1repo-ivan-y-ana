@@ -8,7 +8,6 @@ public class Point2D {
         this.y=y;
     }
     public Point2D() {
-
     }
 
     public float getX() {
