@@ -5,19 +5,24 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BookTest {
-
     @Test
     void getIsbn() {
-        Author author = new Author("John Doe", "john.doe@example.com");
-        Book book = new Book("1234567890", "Test Book", author, 29.99, 5);
+        Book book = new Book("1234567890", "Test Book", new Author("Author Name", "author@example.com"), 19.99, 5);
         assertEquals("1234567890", book.getIsbn());
-
     }
-
+    @Test
+    void testFourParameterConstructor() {
+        Author author = new Author("John Doe", "john.doe@example.com");
+        Book book = new Book("1234567890", "Test Book", author, 29.99);
+        assertEquals("1234567890", book.getIsbn());
+        assertEquals("Test Book", book.getName());
+        assertEquals(author, book.getAuthor());
+        assertEquals(29.99, book.getPrice(), 0.001);
+        assertEquals(0, book.getQty()); // Default value for qty should be 0
+    }
     @Test
     void getName() {
-        Author author = new Author("John Doe", "john.doe@example.com");
-        Book book = new Book("1234567890", "Test Book", author, 29.99, 5);
+        Book book = new Book("1234567890", "Test Book", new Author("Author Name", "author@example.com"), 19.99, 5);
         assertEquals("Test Book", book.getName());
     }
 
@@ -30,30 +35,26 @@ class BookTest {
 
     @Test
     void getPrice() {
-        Author author = new Author("John Doe", "john.doe@example.com");
-        Book book = new Book("1234567890", "Test Book", author, 29.99, 5);
-        assertEquals(29.99, book.getPrice(), 0.01);
+        Book book = new Book("1234567890", "Test Book", new Author("Author Name", "author@example.com"), 19.99, 5);
+        assertEquals(19.99, book.getPrice(), 0.001); // Tolerancia para la comparación de números de punto flotante
     }
 
     @Test
     void setPrice() {
-        Author author = new Author("John Doe", "john.doe@example.com");
-        Book book = new Book("1234567890", "Test Book", author, 29.99, 5);
-        book.setPrice(39.99);
-        assertEquals(39.99, book.getPrice(), 0.01);
+        Book book = new Book("1234567890", "Test Book", new Author("Author Name", "author@example.com"), 19.99, 5);
+        book.setPrice(29.99);
+        assertEquals(29.99, book.getPrice(), 0.001);
     }
 
     @Test
     void getQty() {
-        Author author = new Author("John Doe", "john.doe@example.com");
-        Book book = new Book("1234567890", "Test Book", author, 29.99, 5);
+        Book book = new Book("1234567890", "Test Book", new Author("Author Name", "author@example.com"), 19.99, 5);
         assertEquals(5, book.getQty());
     }
 
     @Test
     void setQty() {
-        Author author = new Author("John Doe", "john.doe@example.com");
-        Book book = new Book("1234567890", "Test Book", author, 29.99, 5);
+        Book book = new Book("1234567890", "Test Book", new Author("Author Name", "author@example.com"), 19.99, 5);
         book.setQty(10);
         assertEquals(10, book.getQty());
     }

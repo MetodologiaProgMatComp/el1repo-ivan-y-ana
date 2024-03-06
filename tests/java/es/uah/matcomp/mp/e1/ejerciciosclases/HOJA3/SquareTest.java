@@ -7,6 +7,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class SquareTest {
 
     @Test
+    void SquareSide(){
+        double side = 5.0;
+        Square square = new Square(side);
+        assertEquals(side, square.getSide(), 0.01);
+        assertEquals(side, square.getWidth(), 0.01);
+        assertEquals(side, square.getLength(), 0.01);
+    }
+    @Test
     void getSide() {
         double side = 3.0;
         String color = "Red";

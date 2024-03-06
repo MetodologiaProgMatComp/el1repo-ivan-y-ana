@@ -3,47 +3,45 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MyLineTest {
-
+    @org.junit.jupiter.api.Test
+    void MyLine(){
+        MyLine line = new MyLine(0, 0, 1, 1);
+        assertEquals(0,line.getBeginX());
+        assertEquals(0,line.getBeginY());
+        assertEquals(1,line.getEndX());
+        assertEquals(1,line.getEndY());
+    }
     @org.junit.jupiter.api.Test
     void getBegin() {
-        MyPoint p1 = new MyPoint(3, 2);
-        int [] esperado = new int[2];
-        esperado[0]=3;
-        esperado[1]=2;
-        int [] actual = p1.getXY();
-        assertArrayEquals(esperado,actual);
+        MyPoint p3 = new MyPoint(3,5);
+        MyLine line = new MyLine(3, 5, 7, 8);
+        assertEquals(p3.getX(), line.getBegin().getX());
+        assertEquals(p3.getY(), line.getBegin().getY());
+
     }
 
     @org.junit.jupiter.api.Test
     void setBegin() {
-        int nuevox = 4;
-        int nuevoy = 7;
-        MyPoint p11 = new MyPoint(2,1);
-        p11.setXY(nuevox,nuevoy);
-        int[] esperado= new int[] {4,7};
-        int[] actual= p11.getXY();
-        assertArrayEquals(esperado,actual);
+        MyLine line = new MyLine(3, 5, 7, 8);
+        MyPoint p4 = new MyPoint(2,3);
+        line.setBegin(p4);
+        assertEquals(p4, line.getBegin());
     }
 
     @org.junit.jupiter.api.Test
     void getEnd() {
-        MyPoint p2 = new MyPoint(5, 7);
-        int [] esperado = new int[2];
-        esperado[0]=5;
-        esperado[1]=7;
-        int [] actual = p2.getXY();
-        assertArrayEquals(esperado,actual);
+        MyPoint p3 = new MyPoint(7,8);
+        MyLine line = new MyLine(3, 5, 7, 8);
+        assertEquals(p3.getX(), line.getEnd().getX());
+        assertEquals(p3.getY(), line.getEnd().getY());
     }
 
     @org.junit.jupiter.api.Test
     void setEnd() {
-        int nuevox = 7;
-        int nuevoy = 8;
-        MyPoint p12 = new MyPoint(5,2);
-        p12.setXY(nuevox,nuevoy);
-        int[] esperado= new int[] {7,8};
-        int[] actual= p12.getXY();
-        assertArrayEquals(esperado,actual);
+        MyLine line = new MyLine(3, 5, 7, 8);
+        MyPoint p4 = new MyPoint(9,10);
+        line.setEnd(p4);
+        assertEquals(p4, line.getEnd());
     }
 
     @org.junit.jupiter.api.Test
@@ -54,10 +52,9 @@ class MyLineTest {
 
     @org.junit.jupiter.api.Test
     void setBeginX() {
-        int nuevox = 3;
-        MyPoint p4= new MyPoint(2,3);
-        p4.setX(nuevox);
-        assertEquals(3,p4.getX());
+        MyLine line = new MyLine(0, 5, 7, 8);
+        line.setBeginX(3);
+        assertEquals(3,line.getBeginX());
     }
 
     @org.junit.jupiter.api.Test
@@ -68,10 +65,9 @@ class MyLineTest {
 
     @org.junit.jupiter.api.Test
     void setBeginY() {
-        int nuevoy = 3;
-        MyPoint p4= new MyPoint(2,3);
-        p4.setX(nuevoy);
-        assertEquals(3,p4.getY());
+        MyLine line = new MyLine(0, 5, 7, 8);
+        line.setBeginY(3);
+        assertEquals(3,line.getBeginY());
     }
 
     @org.junit.jupiter.api.Test
@@ -82,10 +78,9 @@ class MyLineTest {
 
     @org.junit.jupiter.api.Test
     void setEndX() {
-        int nuevox = 3;
-        MyPoint p4= new MyPoint(2,3);
-        p4.setX(nuevox);
-        assertEquals(3,p4.getX());
+        MyLine line = new MyLine(0, 5, 7, 8);
+        line.setEndX(3);
+        assertEquals(3,line.getEndX());
     }
 
     @org.junit.jupiter.api.Test
@@ -96,53 +91,43 @@ class MyLineTest {
 
     @org.junit.jupiter.api.Test
     void setEndY() {
-        int nuevoy = 3;
-        MyPoint p4= new MyPoint(2,3);
-        p4.setX(nuevoy);
-        assertEquals(3,p4.getY());
+        MyLine line = new MyLine(0, 5, 7, 8);
+        line.setEndY(3);
+        assertEquals(3,line.getEndY());
     }
 
     @org.junit.jupiter.api.Test
     void getBeginXY() {
-        MyPoint p8 = new MyPoint(3, 2);
-        int [] esperado = new int[2];
-        esperado[0]=3;
-        esperado[1]=2;
-        int [] actual = p8.getXY();
-        assertArrayEquals(esperado,actual);
-
+        MyLine line = new MyLine(1, 2, 3, 4);
+        int[] expectedCoordinates = {1, 2};
+        assertArrayEquals(expectedCoordinates, line.getBeginXY());
     }
 
     @org.junit.jupiter.api.Test
     void setBeginXY() {
-        int nuevox = 4;
-        int nuevoy = 7;
-        MyPoint p16 = new MyPoint(2,1);
-        p16.setXY(nuevox,nuevoy);
-        int[] esperado= new int[] {4,7};
-        int[] actual= p16.getXY();
-        assertArrayEquals(esperado,actual);
+        MyLine line = new MyLine(1, 2, 3, 4);
+        int newX = 5;
+        int newY = 6;
+        line.setBeginXY(newX, newY);
+        assertEquals(newX, line.getBeginX());
+        assertEquals(newY, line.getBeginY());
     }
 
     @org.junit.jupiter.api.Test
     void getEndXY() {
-        MyPoint p9 = new MyPoint(6, 7);
-        int [] esperado = new int[2];
-        esperado[0]=6;
-        esperado[1]=7;
-        int [] actual = p9.getXY();
-        assertArrayEquals(esperado,actual);
+        MyLine line = new MyLine(1, 2, 3, 4);
+        int[] expectedCoordinates = {3, 4};
+        assertArrayEquals(expectedCoordinates, line.getEndXY());
     }
 
     @org.junit.jupiter.api.Test
     void setEndXY() {
-        int nuevox = 5;
-        int nuevoy = 9;
-        MyPoint p18 = new MyPoint(2,1);
-        p18.setXY(nuevox,nuevoy);
-        int[] esperado= new int[] {5,9};
-        int[] actual= p18.getXY();
-        assertArrayEquals(esperado,actual);
+        MyLine line = new MyLine(1, 2, 3, 4);
+        int newX = 5;
+        int newY = 6;
+        line.setEndXY(newX, newY);
+        assertEquals(newX, line.getEndX());
+        assertEquals(newY, line.getEndY());
     }
 
     @org.junit.jupiter.api.Test

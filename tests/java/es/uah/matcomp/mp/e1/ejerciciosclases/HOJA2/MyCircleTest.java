@@ -42,8 +42,9 @@ class MyCircleTest {
 
     @Test
     void setCenterX() {
-        MyCircle circle = new MyCircle();
-        assertEquals(0, circle.getCenterX());
+        MyCircle circle = new MyCircle(2, 3, 5);
+        circle.setCenterX(4);
+        assertEquals(4, circle.getCenterX());
     }
 
     @Test
@@ -54,8 +55,9 @@ class MyCircleTest {
 
     @Test
     void setCenterY() {
-        MyCircle circle = new MyCircle();
-        assertEquals(0, circle.getCenterY());
+        MyCircle circle = new MyCircle(2, 3, 5);
+        circle.setCenterY(8);
+        assertEquals(8, circle.getCenterY());
     }
 
     @Test

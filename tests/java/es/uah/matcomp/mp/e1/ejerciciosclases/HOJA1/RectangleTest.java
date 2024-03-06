@@ -7,6 +7,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class RectangleTest {
 
     @Test
+    void Rectangle(){
+        Rectangle rectangle = new Rectangle();
+        assertEquals(1.0f, rectangle.getLength(), 0.01);
+        assertEquals(1.0f, rectangle.getWidth(), 0.01);
+    }
+    @Test
     void getLength() {
         Rectangle rectangle = new Rectangle(5.0f, 3.0f);
         assertEquals(5.0f, rectangle.getLength(), 0.001);

@@ -7,6 +7,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class Cylinder2Test {
 
     @Test
+    void Cylinder2(){
+        Cylinder2 cylinder = new Cylinder2();
+        assertEquals(1.0, cylinder.getHeight(), 0.0001);
+        assertEquals(1.0, cylinder.getBaseRadius(), 0.0001);
+        assertEquals(Math.PI, cylinder.getBaseArea(), 0.0001);
+        assertEquals(Math.PI, cylinder.getVolume(), 0.0001);
+        assertEquals("Cylinder: base radius=1.0, height=1.0)", cylinder.toString());
+    }
+    @Test
     void getHeight() {
         double radius = 2.5;
         double height = 3.0;

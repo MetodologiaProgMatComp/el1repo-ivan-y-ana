@@ -14,9 +14,9 @@ class MovablePointTest {
 
     @Test
     void setXSpeed() {
-        MovablePoint movablePoint = new MovablePoint();
-        movablePoint.setSpeed(5.0f, 6.0f);
-        assertEquals(5.0f, movablePoint.getXSpeed(), 0.01);
+        MovablePoint point = new MovablePoint(1.0f, 2.0f, 3.0f, 4.0f);
+        point.setXSpeed(5.0f);
+        assertEquals(5.0f, point.getXSpeed(), 0.0);
     }
 
     @Test
@@ -27,9 +27,9 @@ class MovablePointTest {
 
     @Test
     void setYSpeed() {
-        MovablePoint movablePoint = new MovablePoint();
-        movablePoint.setSpeed(5.0f, 6.0f);
-        assertEquals(6.0f, movablePoint.getYSpeed(), 0.01);
+        MovablePoint point = new MovablePoint(1.0f, 2.0f, 3.0f, 4.0f);
+        point.setYSpeed(5.0f);
+        assertEquals(5.0f, point.getYSpeed(), 0.0);
     }
 
     @Test

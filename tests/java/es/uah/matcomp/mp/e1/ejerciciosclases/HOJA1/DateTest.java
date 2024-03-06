@@ -56,7 +56,13 @@ class DateTest {
 
     @Test
     void testToString() {
-        Date date = new Date(15, 12, 2023);
-        assertEquals("15/12/2023", date.toString());
+        Date date1 = new Date(5, 8, 2023);
+        assertEquals("05/08/2023", date1.toString());
+        Date date2 = new Date(9, 12, 2021);
+        assertEquals("09/12/2021", date2.toString());
+        Date date3 = new Date(15, 4, 2022);
+        assertEquals("15/04/2022", date3.toString());
+        Date date4 = new Date(25, 10, 2024);
+        assertEquals("25/10/2024", date4.toString());
     }
 }

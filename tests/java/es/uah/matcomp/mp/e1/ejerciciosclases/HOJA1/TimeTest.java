@@ -56,8 +56,22 @@ class TimeTest {
 
     @Test
     void testToString() {
-        Time time = new Time(12, 15, 30);
-        assertEquals("12:15:30", time.toString());
+        Time time1 = new Time(1, 2, 3);
+        assertEquals("01:02:03", time1.toString());
+        Time time2 = new Time(12, 34, 56);
+        assertEquals("12:34:56", time2.toString());
+        Time time3 = new Time(5, 9, 15);
+        assertEquals("05:09:15", time3.toString());
+        Time time4 = new Time(8, 12, 7);
+        assertEquals("08:12:07", time4.toString());
+        Time time5 = new Time(15, 3, 45);
+        assertEquals("15:03:45", time5.toString());
+        Time time6 = new Time(18, 5, 9);
+        assertEquals("18:05:09", time6.toString());
+        Time time7 = new Time(0, 0, 0);
+        assertEquals("00:00:00", time7.toString());
+        Time time8 = new Time(23, 59, 59);
+        assertEquals("23:59:59", time8.toString());
     }
 
     @Test

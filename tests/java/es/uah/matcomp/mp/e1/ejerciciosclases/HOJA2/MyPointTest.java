@@ -5,6 +5,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class MyPointTest {
 
     @org.junit.jupiter.api.Test
+    void MyPoint(){
+        MyPoint point = new MyPoint();
+        assertEquals(0, point.getX());
+        assertEquals(0, point.getY());
+    }
+    @org.junit.jupiter.api.Test
     void getX() {
         MyPoint p1 = new MyPoint(3,4);
         assertEquals(3,p1.getX());
