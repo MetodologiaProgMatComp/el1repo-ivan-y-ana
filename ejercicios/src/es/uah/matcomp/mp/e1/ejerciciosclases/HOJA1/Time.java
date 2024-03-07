@@ -45,7 +45,11 @@ public class Time {
                     return "0" + hour + ":0" + minute + ":" + second;
                 }
             }else{
-                return "0" + hour + ":" + minute + ":" + second;
+                if (this.second < 10) {
+                    return "0" + hour + ":" + minute + ":0" + second;
+                }else{
+                    return "0" + hour + ":" + minute + ":" + second;
+                }
             }
         }else {
             if (this.minute < 10) {

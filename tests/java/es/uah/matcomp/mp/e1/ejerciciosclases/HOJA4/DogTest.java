@@ -12,7 +12,7 @@ class DogTest {
 
     @Test
     void greets() {
-        es.uah.matcomp.mp.e1.ejerciciosclases.HOJA3.Dog perro = new es.uah.matcomp.mp.e1.ejerciciosclases.HOJA3.Dog("Luna");
+        Dog perro = new Dog("Luna");
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
         perro.greets();
@@ -22,10 +22,11 @@ class DogTest {
 
     @Test
     void testGreets() {
-        es.uah.matcomp.mp.e1.ejerciciosclases.HOJA3.Dog perro2 = new Dog("Tego");
+        Dog perro2 = new Dog("Tego");
+        Dog perro3 = new Dog("Fido");
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
-        perro2.greets(perro2);
+        perro2.greets(perro3); // Invocar al método greets(Dog) con otro perro como parámetro
         assertEquals("Woooof\n", outputStream.toString());
         System.setOut(System.out);
     }

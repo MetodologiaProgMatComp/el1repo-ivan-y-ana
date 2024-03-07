@@ -8,40 +8,40 @@ class Rectangle1Test {
 
     @Test
     void getWidth() {
-        Rectangle1 rectangle = new Rectangle1(5.0, 10.0);
-        assertEquals(5.0, rectangle.getWidth(), 0.001);
+        Rectangle1 rectangle = new Rectangle1();
+        assertEquals(1.0, rectangle.getWidth(), 0.0);
     }
 
     @Test
     void setWidth() {
         Rectangle1 rectangle = new Rectangle1();
-        rectangle.setWidth(20.0);
-        assertEquals(20.0, rectangle.getWidth(), 0.001);
+        rectangle.setWidth(5.0);
+        assertEquals(5.0, rectangle.getWidth(), 0.0);
     }
 
     @Test
     void getLength() {
-        Rectangle1 rectangle = new Rectangle1(5.0, 10.0);
-        assertEquals(10.0, rectangle.getLength(), 0.001);
+        Rectangle1 rectangle = new Rectangle1();
+        assertEquals(1.0, rectangle.getLength(), 0.0);
     }
 
     @Test
     void setLength() {
         Rectangle1 rectangle = new Rectangle1();
-        rectangle.setLength(15.0);
-        assertEquals(15.0, rectangle.getLength(), 0.001);
+        rectangle.setLength(10.0);
+        assertEquals(10.0, rectangle.getLength(), 0.0);
     }
 
     @Test
     void getArea() {
         Rectangle1 rectangle = new Rectangle1(5.0, 10.0);
-        assertEquals(50.0, rectangle.getArea(), 0.001);
+        assertEquals(50.0, rectangle.getArea(), 0.0);
     }
 
     @Test
     void getPerimeter() {
         Rectangle1 rectangle = new Rectangle1(5.0, 10.0);
-        assertEquals(30.0, rectangle.getPerimeter(), 0.001);
+        assertEquals(30.0, rectangle.getPerimeter(), 0.0);
     }
 
     @Test

@@ -9,28 +9,29 @@ class SquareTest {
     @Test
     void getSide() {
         Square square = new Square(5.0);
-        assertEquals(5.0, square.getSide(), 0.001);
+        assertEquals(5.0, square.getSide(), 0.0);
     }
 
     @Test
     void setSide() {
         Square square = new Square();
-        square.setSide(10.0);
-        assertEquals(10.0, square.getSide(), 0.001);
+        square.setSide(8.0);
+        assertEquals(8.0, square.getSide(), 0.0);
     }
 
     @Test
     void setWidth() {
-        Square square = new Square(5.0);
-        square.setWidth(10.0);
-        assertEquals(10.0, square.getWidth(), 0.001);
+        Square square = new Square();
+        square.setWidth(6.0);
+        assertEquals(6.0, square.getWidth(), 0.0);
     }
 
     @Test
     void setLength() {
-        Square square = new Square(5.0);
-        square.setLength(10.0);
-        assertEquals(10.0, square.getLength(), 0.001);
+        // Caso de prueba 1: Establecer la longitud de un cuadrado a un valor positivo
+        Square square1 = new Square();
+        square1.setLength(5.0);
+        assertEquals(5.0, square1.getLength(), 0.0001); // Verificar que la longitud sea 5.0
     }
 
     @Test
