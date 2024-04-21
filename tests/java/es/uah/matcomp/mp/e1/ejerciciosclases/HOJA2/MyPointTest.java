@@ -41,46 +41,46 @@ class MyPointTest {
     @org.junit.jupiter.api.Test
     void getXY() {
         MyPoint p3 = new MyPoint(3,2);
-        int [] esperado = new int[2];
+        double [] esperado = new double[2];
         esperado[0] = 3;
         esperado[1] = 2;
-        int [] actual = p3.getXY();
+        double [] actual = p3.getXY();
         assertArrayEquals(esperado,actual);
     }
 
     @org.junit.jupiter.api.Test
     void setXY() {
-        int nuevoX = 4;
-        int nuevoY = 7;
+        double nuevoX = 4;
+        double nuevoY = 7;
         MyPoint p4 = new MyPoint(1,2);
         p4.setXY(nuevoX,nuevoY);
-        int [] esperado = new int[] {4,7};
-        int [] actual = p4.getXY();
+        double [] esperado = new double[] {4,7};
+        double [] actual = p4.getXY();
         assertArrayEquals(esperado,actual);
     }
 
     @org.junit.jupiter.api.Test
     void testToString() {
         MyPoint p5 = new MyPoint(2,3);
-        String esperado = "(2,3)";
+        String esperado = "(2.0,3.0)";
         String actual = p5.toString();
         assertEquals(esperado,actual);
     }
 
     @org.junit.jupiter.api.Test
     void distance() { //Un punto y otras coordenadas
-        int x1 = 3;
-        int y1 = 4;
+        double x1 = 3;
+        double y1 = 4;
         MyPoint p1 = new MyPoint(x1,y1);
         assertEquals(5,p1.distance(6,8));
     }
 
     @org.junit.jupiter.api.Test
     void testDistance() { //Un punto a otro
-        int x1 = 3;
-        int y1 = 4;
-        int x2 = 6;
-        int y2 = 8;
+        double x1 = 3;
+        double y1 = 4;
+        double x2 = 6;
+        double y2 = 8;
         MyPoint p1 = new MyPoint(x1,y1);
         MyPoint p2 = new MyPoint(x2,y2);
         assertEquals(5,p1.distance(p2));

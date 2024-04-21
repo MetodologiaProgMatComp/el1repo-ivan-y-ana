@@ -1,47 +1,69 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA2;
 
 public class MyPoint {
-    private int x=0;
-    private int y=0;
-    public MyPoint(){
+    private double x;
+    private double y;
+
+    public MyPoint() {
+        this.x = 0;
+        this.y = 0;
     }
-    public MyPoint(int x,int y){
-        this.x=x;
-        this.y=y;
+
+    public MyPoint(double x, double y) {
+        this.x = x;
+        this.y = y;
     }
-    public int getX(){
-        return this.x;
+
+
+    public double getX() {
+        return x;
     }
-    public void setX(int x){
-        this.x=x;
+
+    public void setX(double x) {
+        this.x = x;
     }
-    public int getY(){
-        return this.y;
+
+    public double getY() {
+        return y;
     }
-    public void setY(int y){
-        this.y=y;
+
+    public void setY(double y) {
+        this.y = y;
     }
-    public int[] getXY(){
-        return new int[]{x,y};
+
+    public double[] getXY() {
+        double[] ints = new double[]{x, y};
+        return ints;
     }
-    public void setXY(int x,int y){
-        this.x=x;
-        this.y=y;
+
+    public String getArrayToString(double[] lista) {
+        double x = lista[0];
+        double y = lista[1];
+        return String.format("{%s,%s}", x, y);
     }
-    public String toString(){
-        return "("+x+","+y+")";
+
+    public void setXY(double x, double y) {
+        this.x = x;
+        this.y = y;
     }
-    public double distance(int x,int y){
-        int dx= this.x-x;
-        int dy= this.y-y;
-        return Math.sqrt(Math.pow(dx,2)+Math.pow(dy,2));
+
+    public String toString() {
+        return String.format("(%s,%s)", x, y);
     }
-    public double distance(MyPoint another){
-        int dx= this.x-another.getX();
-        int dy= this.y- another.getY();
-        return Math.sqrt(Math.pow(dx,2)+Math.pow(dy,2));
+
+    public double distance(double x, double y) {
+        double deltaX = this.x - x;
+        double deltaY = this.y - y;
+        return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
     }
-    public double distance(){
-        return Math.sqrt(x*x+y*y);
+
+    public double distance(MyPoint another) {
+        double deltaX = this.x - another.x;
+        double deltaY = this.y - another.y;
+        return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+    }
+
+    public double distance() {
+        return Math.sqrt(x * x + y * y);
     }
 }

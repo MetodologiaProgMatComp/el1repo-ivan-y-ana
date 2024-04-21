@@ -79,7 +79,7 @@ class MyCircleTest {
     @Test
     void testToString() {
         MyCircle circle = new MyCircle(2, 3, 5);
-        assertEquals("MyCircle[radius=5,center=(2,3)]", circle.toString());
+        assertEquals("MyCircle[radius=5.0,center=(2.0,3.0)]", circle.toString());
     }
 
     @Test

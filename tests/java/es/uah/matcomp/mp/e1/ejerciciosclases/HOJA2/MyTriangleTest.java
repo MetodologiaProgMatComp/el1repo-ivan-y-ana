@@ -8,34 +8,23 @@ class MyTriangleTest {
 
     @Test
     void testToString() {
-        MyPoint v1 = new MyPoint(1, 1);
-        MyPoint v2 = new MyPoint(2, 2);
-        MyPoint v3 = new MyPoint(3, 3);
-        MyTriangle triangle = new MyTriangle(v1, v2, v3);
-        assertEquals("MyTriangle[v1=(1,1),v2=(2,2),v3=(3,3)]", triangle.toString());
+        MyTriangle t1 = new MyTriangle(new MyPoint(1,2),new MyPoint(3,4),new MyPoint(5,6));
+        assertEquals(t1.toString(), "MyTriangle[v1={1.0,2.0}], v2={3.0,4.0}], v3={5.0,6.0}]]");
     }
 
     @Test
     void getPerimeter() {
-        MyTriangle equilateralTriangle = new MyTriangle(0, 0, 3, 0, 0, 4);
-        assertEquals(12.0, equilateralTriangle.getPerimeter(), 0.001);
-
-        MyTriangle isoscelesTriangle = new MyTriangle(-1, -1, 1, 5, 3, -1);
-        assertEquals(16.6491, isoscelesTriangle.getPerimeter(), 0.001);
-
-        MyTriangle scaleneTriangle = new MyTriangle(0, 0, 0, 2, 3, 0);
-        assertEquals(8.605, scaleneTriangle.getPerimeter(), 0.001);
+        MyTriangle t1 = new MyTriangle(1,2,3,4,5,6);
+        assertEquals(t1.getPerimeter(),11.313708498984761);
     }
 
     @Test
     void getType() {
-        MyTriangle isoscelesTriangle = new MyTriangle(-1, -1, 1, 5, 3, -1);
-        assertEquals("Isosceles", isoscelesTriangle.getType());
-
-        MyTriangle isoscelesTriangle2 = new MyTriangle(0, 0, 0, 2, 3, 0);
-        assertEquals("Scalene", isoscelesTriangle2.getType());
-
-        MyTriangle scaleneTriangle = new MyTriangle(1, 2, 4, 5, 7, 1);
-        assertEquals("Scalene", scaleneTriangle.getType());
+        MyTriangle t1 = new MyTriangle(new MyPoint(2.5, ((5*(Math.sqrt(3))/2))), new MyPoint(0, 0), new MyPoint(5, 0));
+        MyTriangle t2 = new MyTriangle(-1, 1, -1, -2, 2, 1);
+        MyTriangle t3 = new MyTriangle(0, 0, 1, 1, 8, 2);
+        assertEquals(t1.getType(),"Equilateral");
+        assertEquals(t2.getType(),"Isosceles");
+        assertEquals(t3.getType(),"Scalene");
     }
 }

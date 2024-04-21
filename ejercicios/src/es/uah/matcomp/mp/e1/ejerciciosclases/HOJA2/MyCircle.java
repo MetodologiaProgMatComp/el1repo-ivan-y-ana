@@ -2,23 +2,23 @@ package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA2;
 
 public class MyCircle {
     private MyPoint center=new MyPoint(0,0);
-    private int radius=1;
+    private double radius=1;
     public MyCircle(){
 
     }
-    public MyCircle(int x,int y,int radius){
+    public MyCircle(double x,double y,double radius){
         this.center.setX(x);
         this.center.setY(y);
         this.radius=radius;
     }
-    public MyCircle(MyPoint center,int radius){
+    public MyCircle(MyPoint center,double radius){
         this.center=center;
         this.radius=radius;
     }
-    public int getRadius(){
+    public double getRadius(){
         return this.radius;
     }
-    public void setRadius(int radius){
+    public void setRadius(double radius){
         this.radius=radius;
     }
     public MyPoint getCenter(){
@@ -27,22 +27,22 @@ public class MyCircle {
     public void setCenter(MyPoint center){
         this.center=center;
     }
-    public int getCenterX(){
+    public double getCenterX(){
         return this.center.getX();
     }
-    public void setCenterX(int x){
+    public void setCenterX(double x){
         this.center.setX(x);
     }
-    public int getCenterY(){
+    public double getCenterY(){
         return this.center.getY();
     }
-    public void setCenterY(int y){
+    public void setCenterY(double y){
         this.center.setY(y);
     }
-    public int[] getCenterXY(){
+    public double[] getCenterXY(){
         return this.center.getXY();
     }
-    public void setCenterXY(int x,int y){
+    public void setCenterXY(double x,double y){
         this.center.setXY(x,y);
     }
     public String toString(){
@@ -55,8 +55,8 @@ public class MyCircle {
         return 2*Math.PI*radius;
     }
     public double distance(MyCircle another){
-        int[] center1= this.getCenterXY();
-        int[] center2= another.getCenterXY();
+        double[] center1= this.getCenterXY();
+        double[] center2= another.getCenterXY();
         return Math.sqrt(Math.pow(center1[0]-center2[0],2)+Math.pow(center1[1]-center2[1],2));
     }
 

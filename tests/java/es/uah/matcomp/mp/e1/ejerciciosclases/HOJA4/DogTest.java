@@ -1,6 +1,5 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA4;
 
-import es.uah.matcomp.mp.e1.ejerciciosclases.HOJA3.Dog;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -12,21 +11,20 @@ class DogTest {
 
     @Test
     void greets() {
-        Dog perro = new Dog("Luna");
+        Dog peer = new Dog("Mia");
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
-        perro.greets();
+        peer.greets();
         assertEquals("Woof\n", outputStream.toString());
         System.setOut(System.out);
     }
 
     @Test
     void testGreets() {
-        Dog perro2 = new Dog("Tego");
-        Dog perro3 = new Dog("Fido");
+        Dog perro2 = new Dog("Luna");
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
-        perro2.greets(perro3); // Invocar al método greets(Dog) con otro perro como parámetro
+        perro2.greets(perro2);
         assertEquals("Woooof\n", outputStream.toString());
         System.setOut(System.out);
     }

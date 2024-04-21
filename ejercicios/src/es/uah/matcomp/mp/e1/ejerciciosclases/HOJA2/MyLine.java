@@ -3,7 +3,7 @@ package es.uah.matcomp.mp.e1.ejerciciosclases.HOJA2;
 public class MyLine {
     private MyPoint begin;
     private MyPoint end;
-    public MyLine(int x1,int y1,int x2,int y2){
+    public MyLine(double x1,double y1,double x2,double y2){
         this.begin=new MyPoint(x1,y1);
         this.end=new MyPoint(x2,y2);
     }
@@ -23,48 +23,48 @@ public class MyLine {
     public void setEnd(MyPoint end){
         this.end=end;
     }
-    public int getBeginX(){
+    public double getBeginX(){
         return this.begin.getX();
     }
-    public void setBeginX(int x){
+    public void setBeginX(double x){
         this.begin.setX(x);
     }
-    public int getBeginY(){
+    public double getBeginY(){
         return this.begin.getY();
     }
-    public void setBeginY(int y){
+    public void setBeginY(double y){
         this.begin.setY(y);
     }
-    public int getEndX(){
+    public double getEndX(){
         return this.end.getX();
     }
-    public void setEndX(int x){
+    public void setEndX(double x){
         this.end.setX(x);
     }
-    public int getEndY(){
+    public double getEndY(){
         return this.end.getY();
     }
-    public void setEndY(int y){
+    public void setEndY(double y){
         this.end.setY(y);
     }
-    public int[] getBeginXY(){
+    public double[] getBeginXY(){
         return this.begin.getXY();
     }
-    public void setBeginXY(int x,int y){
+    public void setBeginXY(double x,double y){
         this.begin.setXY(x,y);
     }
-    public int[] getEndXY(){
+    public double[] getEndXY(){
         return this.end.getXY();
     }
-    public void setEndXY(int x,int y){
+    public void setEndXY(double x,double y){
         this.end.setXY(x,y);
     }
     public double getLength(){
         return this.begin.distance(end);
     }
     public double getGradient(){
-        int xDiff=end.getX()-begin.getX();
-        int yDiff=end.getY()-begin.getY();
+        double xDiff=end.getX()-begin.getX();
+        double yDiff=end.getY()-begin.getY();
         return Math.atan2(yDiff, xDiff);
     }
     public String toString(){

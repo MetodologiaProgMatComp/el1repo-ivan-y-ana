@@ -99,15 +99,15 @@ class MyLineTest {
     @org.junit.jupiter.api.Test
     void getBeginXY() {
         MyLine line = new MyLine(1, 2, 3, 4);
-        int[] expectedCoordinates = {1, 2};
+        double[] expectedCoordinates = {1, 2};
         assertArrayEquals(expectedCoordinates, line.getBeginXY());
     }
 
     @org.junit.jupiter.api.Test
     void setBeginXY() {
         MyLine line = new MyLine(1, 2, 3, 4);
-        int newX = 5;
-        int newY = 6;
+        double newX = 5;
+        double newY = 6;
         line.setBeginXY(newX, newY);
         assertEquals(newX, line.getBeginX());
         assertEquals(newY, line.getBeginY());
@@ -116,15 +116,15 @@ class MyLineTest {
     @org.junit.jupiter.api.Test
     void getEndXY() {
         MyLine line = new MyLine(1, 2, 3, 4);
-        int[] expectedCoordinates = {3, 4};
+        double[] expectedCoordinates = {3, 4};
         assertArrayEquals(expectedCoordinates, line.getEndXY());
     }
 
     @org.junit.jupiter.api.Test
     void setEndXY() {
         MyLine line = new MyLine(1, 2, 3, 4);
-        int newX = 5;
-        int newY = 6;
+        double newX = 5;
+        double newY = 6;
         line.setEndXY(newX, newY);
         assertEquals(newX, line.getEndX());
         assertEquals(newY, line.getEndY());
@@ -144,8 +144,8 @@ class MyLineTest {
         MyPoint begin = new MyPoint(2, 3);
         MyPoint end = new MyPoint(5, 8);
         MyLine line = new MyLine(begin, end);
-        int xDiff=end.getX()-begin.getX();
-        int yDiff=end.getY()-begin.getY();
+        double xDiff=end.getX()-begin.getX();
+        double yDiff=end.getY()-begin.getY();
         double expectedGradient = Math.atan2(yDiff,xDiff);
         assertEquals(expectedGradient, line.getGradient());
 

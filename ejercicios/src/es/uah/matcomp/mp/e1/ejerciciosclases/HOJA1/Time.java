@@ -5,95 +5,93 @@ public class Time {
     private int minute;
     private int second;
 
-    public Time(int hour, int minute, int second) {
-        this.hour = hour;
-        this.minute = minute;
-        this.second = second;
+    ///////////////////
+    public Time(int h, int m, int s) {
+        this.hour = h;
+        this.minute = m;
+        this.second = s;
     }
 
     public int getHour() {
-        return this.hour;
+        return hour;
+    }
+
+    public void setHour(int hour) {
+        this.hour = hour;
     }
 
     public int getMinute() {
-        return this.minute;
+        return minute;
+    }
+
+    public void setMinute(int minute) {
+        this.minute = minute;
     }
 
     public int getSecond() {
-        return this.second;
+        return second;
     }
-    public void setHour(int hour){
-        this.hour = hour;
-    }
-    public void setMinute(int minute){
-        this.minute = minute;
-    }
-    public void setSecond(int second){
+
+    public void setSecond(int second) {
         this.second = second;
     }
-    public void setTime(int hour,int minute,int second){
-        this.hour = hour;
-        this.minute = minute;
-        this.second = second;
+
+    public void setTime(int h, int m, int s) {
+        this.hour = h;
+        this.minute = m;
+        this.second = s;
     }
-    public String toString(){
-        if (this.hour < 10){
-            if (this.minute < 10) {
-                if (this.second < 10) {
-                    return "0" + hour + ":0" + minute + ":0" + second;
-                }else{
-                    return "0" + hour + ":0" + minute + ":" + second;
-                }
-            }else{
-                if (this.second < 10) {
-                    return "0" + hour + ":" + minute + ":0" + second;
-                }else{
-                    return "0" + hour + ":" + minute + ":" + second;
-                }
-            }
-        }else {
-            if (this.minute < 10) {
-                if (this.second < 10) {
-                    return hour + ":0" + minute + ":0" + second;
-                }else{
-                    return hour + ":0" + minute + ":" + second;
-                }
-            }else {
-                if (this.second < 10) {
-                    return hour + ":" + minute + ":0" + second;
-                }else{
-                    return hour + ":" + minute + ":" + second;
-                }
-            }
+
+    public String toString() {
+        String hours;
+        String minutes;
+        String seconds;
+        if (hour < 10) {
+            hours = "0" + hour;
+        } else {
+            hours = String.valueOf(hour);
         }
+        if (minute < 10) {
+            minutes = "0" + minute;
+        } else {
+            minutes = String.valueOf(minute);
+        }
+        if (second < 10) {
+            seconds = "0" + second;
+        } else {
+            seconds = String.valueOf(second);
+        }
+        return hours + ":" + minutes + ":" + seconds;
     }
-    public Time nextSecond(){
-        second++;
-        if (second >= 60){
+
+    public Time nextSecond() {
+        second += 1;
+        if (second == 60) {
+            minute += 1;
             second = 0;
-            minute++;
-            if (minute >= 60){
-                minute = 0;
-                hour++;
-                if (hour >= 24) {
-                    hour = 0;
-                }
-            }
+        }
+        if (minute == 60) {
+            hour += 1;
+            minute = 0;
+        }
+        if (hour == 24) {
+            hour = 0;
         }
         return this;
     }
-    public Time previousSecond(){
-        second--;
-        if (second < 0){
+
+    public Time previousSecond() {
+        second -= 1;
+        if (second < 0) {
+            minute -= 1;
             second = 59;
-            minute--;
-            if (minute < 0){
-                minute = 59;
-                hour--;
-                if (hour < 0){
-                    hour = 23;
-                }
-            }
+        }
+        if (minute < 0) {
+            hour -= 1;
+            minute = 59;
+        }
+        if (hour < 0) {
+            hour = 23;
         }
         return this;
     }
